@@ -17,14 +17,12 @@ Using all of the slope and center values, averages were calculated for both the 
 
 ### 2. Identify potential shortcomings with your current pipeline
 
+One potential shortcoming would be what would happen when lane markings were dirty or worn down. If the markings were brown, for example, the threshold in the Canny function would not be able to detect the line. 
 
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
-
+Another shortcoming could be if the car were approaching the top of a hill, so that the cameras are unable to see more than a few feet in front of them. The pipeline would assume that the lines continue with the visible slope, but that could be wrong if the road turned at the top of the hill.
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+A possible improvement would be to 
 
 Another potential improvement could be to ...
