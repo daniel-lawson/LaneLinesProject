@@ -9,7 +9,7 @@
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 6 steps. First, I converted the images to grayscale, then I applied a Gaussian smoothing transformation, then I applied a Canny transformation to identify the edges, then I masked the images, and then finally defined and drew the Hough lines.
+My pipeline consisted of 6 steps. First, I converted the images to grayscale, then I applied a Gaussian smoothing transformation, then I applied a Canny transformation to identify the edges, then I masked the images, and then finally, I defined and drew the Hough lines.
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by finding the slope and center point of every Hough line. Slopes with values too high or too low were ignored, and the lines with a positive slope were concluded to be the right line, while lines with a negative slope were concluded to be the left line. 
 
@@ -23,6 +23,6 @@ Another shortcoming could be if the car were approaching the top of a hill, so t
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to 
+A possible improvement would be to identify the lanes adjacent to the lane that the car is currently in. This would be helpful in merging into the other lanes as well as seeing cars merge into this lane.
 
-Another potential improvement could be to ...
+Another potential improvement could be to detect how high up the image the car can see the lines. Currently, the top of the lines are at a set point below the midpoint. This appears correct in normal driving circumstances, but there are instances where the lines are higher/lower than this point. 
